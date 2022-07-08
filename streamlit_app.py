@@ -11,6 +11,7 @@ my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 streamlit.header('🍋🍇List of Fruits Available🍉🥭')
 
 # Allow customers to pick a list of fruits 
+my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.multiselect("Pick some Fruits:", list(my_fruit_list.index))
 
 # Display the dataframe
