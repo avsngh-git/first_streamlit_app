@@ -12,7 +12,7 @@ streamlit.header('🍋🍇List of Fruits Available🍉🥭')
 
 # Allow customers to pick a list of fruits 
 my_fruit_list = my_fruit_list.set_index('Fruit')
-streamlit.multiselect("Pick some Fruits:", list(my_fruit_list.index))
+streamlit.multiselect("Pick some Fruits:", list(my_fruit_list.index), ['Avocado', 'Strawberries'])
 
 # Display the dataframe
 streamlit.dataframe(my_fruit_list)
